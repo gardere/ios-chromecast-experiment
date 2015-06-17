@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E04F6641B31578300E230B7 /* CamCaptureConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E04F6631B31578300E230B7 /* CamCaptureConnection.m */; };
+		4E04F6671B315ED400E230B7 /* CamCaptureHttpServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E04F6661B315ED400E230B7 /* CamCaptureHttpServer.m */; };
 		4EC0D4231B300AB0001BFE75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0D4221B300AB0001BFE75 /* main.m */; };
 		4EC0D4261B300AB0001BFE75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0D4251B300AB0001BFE75 /* AppDelegate.m */; };
 		4EC0D42F1B300AB0001BFE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC0D42D1B300AB0001BFE75 /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		4EC0D4401B300AB0001BFE75 /* iOSChromeCast_ExperimentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0D43F1B300AB0001BFE75 /* iOSChromeCast_ExperimentTests.m */; };
 		4EC0D44B1B300CC5001BFE75 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0D44A1B300CC5001BFE75 /* CameraViewController.m */; };
 		4EC0D44D1B300D23001BFE75 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC0D44C1B300D23001BFE75 /* AVFoundation.framework */; };
+		AAD6B32E86FAB366B593E1A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D95DD7B4954210CA71EEE94 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B30C72EFB086D316C76801B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4E04F6621B31578300E230B7 /* CamCaptureConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamCaptureConnection.h; sourceTree = "<group>"; };
+		4E04F6631B31578300E230B7 /* CamCaptureConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamCaptureConnection.m; sourceTree = "<group>"; };
+		4E04F6651B315ED400E230B7 /* CamCaptureHttpServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamCaptureHttpServer.h; sourceTree = "<group>"; };
+		4E04F6661B315ED400E230B7 /* CamCaptureHttpServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamCaptureHttpServer.m; sourceTree = "<group>"; };
 		4EC0D41D1B300AB0001BFE75 /* iOSChromeCast_Experiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSChromeCast_Experiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC0D4211B300AB0001BFE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC0D4221B300AB0001BFE75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +50,8 @@
 		4EC0D4491B300CC5001BFE75 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		4EC0D44A1B300CC5001BFE75 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		4EC0D44C1B300D23001BFE75 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5D95DD7B4954210CA71EEE94 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EA06DFBA415455081C950FD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EC0D44D1B300D23001BFE75 /* AVFoundation.framework in Frameworks */,
+				AAD6B32E86FAB366B593E1A0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		048908316160A9F8ACEFFE5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B30C72EFB086D316C76801B /* Pods.debug.xcconfig */,
+				8EA06DFBA415455081C950FD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4EC0D4141B300AB0001BFE75 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +90,8 @@
 				4EC0D41F1B300AB0001BFE75 /* iOSChromeCast_Experiment */,
 				4EC0D43C1B300AB0001BFE75 /* iOSChromeCast_ExperimentTests */,
 				4EC0D41E1B300AB0001BFE75 /* Products */,
+				048908316160A9F8ACEFFE5B /* Pods */,
+				CD1CE787051394DEB7A72BB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +115,10 @@
 				4EC0D4201B300AB0001BFE75 /* Supporting Files */,
 				4EC0D4491B300CC5001BFE75 /* CameraViewController.h */,
 				4EC0D44A1B300CC5001BFE75 /* CameraViewController.m */,
+				4E04F6621B31578300E230B7 /* CamCaptureConnection.h */,
+				4E04F6631B31578300E230B7 /* CamCaptureConnection.m */,
+				4E04F6651B315ED400E230B7 /* CamCaptureHttpServer.h */,
+				4E04F6661B315ED400E230B7 /* CamCaptureHttpServer.m */,
 			);
 			path = iOSChromeCast_Experiment;
 			sourceTree = "<group>";
@@ -123,6 +149,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CD1CE787051394DEB7A72BB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D95DD7B4954210CA71EEE94 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EC0D4431B300AB0001BFE75 /* Build configuration list for PBXNativeTarget "iOSChromeCast_Experiment" */;
 			buildPhases = (
+				6E19507591609EA4BF4B02E3 /* Check Pods Manifest.lock */,
 				4EC0D4191B300AB0001BFE75 /* Sources */,
 				4EC0D41A1B300AB0001BFE75 /* Frameworks */,
 				4EC0D41B1B300AB0001BFE75 /* Resources */,
+				B2B00C8F3BCCB625D4CA9509 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,13 +254,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E19507591609EA4BF4B02E3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B2B00C8F3BCCB625D4CA9509 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4EC0D4191B300AB0001BFE75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E04F6671B315ED400E230B7 /* CamCaptureHttpServer.m in Sources */,
 				4EC0D44B1B300CC5001BFE75 /* CameraViewController.m in Sources */,
 				4EC0D4261B300AB0001BFE75 /* AppDelegate.m in Sources */,
+				4E04F6641B31578300E230B7 /* CamCaptureConnection.m in Sources */,
 				4EC0D4231B300AB0001BFE75 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +420,7 @@
 		};
 		4EC0D4441B300AB0001BFE75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B30C72EFB086D316C76801B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSChromeCast_Experiment/Info.plist;
@@ -360,6 +432,7 @@
 		};
 		4EC0D4451B300AB0001BFE75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EA06DFBA415455081C950FD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSChromeCast_Experiment/Info.plist;
@@ -422,6 +495,7 @@
 				4EC0D4451B300AB0001BFE75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EC0D4461B300AB0001BFE75 /* Build configuration list for PBXNativeTarget "iOSChromeCast_ExperimentTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +504,7 @@
 				4EC0D4481B300AB0001BFE75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

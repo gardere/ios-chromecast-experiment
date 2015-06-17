@@ -7,6 +7,9 @@
 //
 
 #import "CameraViewController.h"
+#import "CamCaptureHttpServer.h"
+#import "CamCaptureConnection.h"
+
 
 @interface CameraViewController() {
     
@@ -15,7 +18,7 @@
 @property (nonatomic, strong) AVCaptureSession* captureSession;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer* videoPreviewLayer;
 @property (nonatomic, strong) UIImage* currentImage;
-
+@property (nonatomic, strong) CamCaptureHttpServer* httpServer;
 
 @end
 
@@ -23,10 +26,32 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [self startCapturing];
+    [self startWebServer];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
     [self stopCapturing];
+    [self stopWebServer];
+}
+
+-(void)startWebServer {
+    NSError* error;
+    
+    self.httpServer = [[CamCaptureHttpServer alloc] init];
+    [self.httpServer setConnectionClass:[CamCaptureConnection class]];
+    [self.httpServer setType:@"_http._tcp."];
+    [self.httpServer setPort:1234];
+    [self.httpServer start:&error];
+    
+    if (error) {
+        NSLog(@"Error starting web server: %@", [error description]);
+    }
+}
+
+-(void)stopWebServer {
+    if (self.httpServer) {
+        [self.httpServer stop];
+    }
 }
 
 -(void)stopCapturing {
@@ -75,6 +100,7 @@
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
     self.currentImage = [self imageFromSampleBuffer: sampleBuffer];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"newImageCapture" object:self.currentImage];
 }
 
 // Create a UIImage from sample buffer data
